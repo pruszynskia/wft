@@ -1,0 +1,241 @@
+[
+  {
+    "company": {
+      "company_name": "Business Design",
+      "size": "10+",
+      "address": {
+        "address_country": "Poland",
+        "address_city": ["Wroclaw"],
+        "address_streat": "Pasteura 17a/1"
+      },
+      "e-mail": "office@bdesign.com.pl",
+      "logo": "img src=...",
+      "creation-date": "2000"
+    },
+    "position": {
+      "position_name": "Frontend Developer",
+      "position_type": "Frontend",
+      "position_lvl": ["Junior"],
+      "position_language-required": ["JavaScript", "React", "CSS", "HTML"],
+      "position_language-optional": ["Git", "Jira"],
+      "position_spoken-language": ["English", "Polish"],
+      "position_remote": true,
+      "position_contract-type": "contract of employment",
+      "position_salary": {
+        "position_salary_min": "3500 PLN",
+        "position_salary_max": "6000 PLN"
+      },
+      "position_date": "1 d ago"
+    }
+  },
+
+  {
+    "company": {
+      "company_name": "Sages",
+      "size": "30+",
+      "address": {
+        "address_country": "Poland",
+        "address_city": ["Warszawa"],
+        "address_streat": "Mazowiecka 4b/5"
+      },
+      "e-mail": "office@sages.com",
+      "logo": "img src=...",
+      "creation-date": "2015"
+    },
+    "position": {
+      "position_name": "Java Developer",
+      "position_type": "Backend",
+      "position_lvl": ["Junior", "Mid"],
+      "position_language-required": [
+        "Java",
+        "Linux",
+        "Gradie",
+        "Java EE",
+        "Git"
+      ],
+      "position_language-optional": [
+        "Python",
+        "Kotlin",
+        "Spring",
+        "Mongo",
+        "Soir",
+        "Jackrabbit",
+        "Docker",
+        "Puppet",
+        "Ansible"
+      ],
+      "position_spoken-language": ["English", "Polish"],
+      "position_remote": false,
+      "position_contract-type": "contract of employment",
+      "position_salary": {
+        "position_salary_min": "10000 PLN",
+        "position_salary_max": "15000 PLN"
+      },
+      "position_date": "3 d ago"
+    }
+  },
+
+  {
+    "company": {
+      "company_name": "Avenga",
+      "size": "2500+",
+      "address": {
+        "address_country": "Poland",
+        "address_city": ["Wrocław"],
+        "address_streat": "Oławska 5"
+      },
+      "e-mail": "office@avenga.com",
+      "logo": "img src=...",
+      "creation-date": "2020"
+    },
+    "position": {
+      "position_name": "Senior Fullstack Java Engineer",
+      "position_type": "Fullstack",
+      "position_lvl": ["Senior"],
+      "position_language-required": [
+        "Java",
+        "JPA",
+        "Java EE",
+        "EJB",
+        "REST",
+        "JUnit",
+        "oracle",
+        "sql server",
+        "OOP"
+      ],
+      "position_language-optional": [],
+      "position_spoken-language": ["English", "Polish"],
+      "position_remote": true,
+      "position_contract-type": "B2B",
+      "position_salary": {
+        "position_salary_min": "10000 PLN",
+        "position_salary_max": "15900 PLN"
+      },
+      "position_date": "2 w ago"
+    }
+  },
+
+  {
+    "company": {
+      "company_name": "Famoc S.A.",
+      "size": "40+",
+      "address": {
+        "address_country": "Poland",
+        "address_city": ["Gdańsk"],
+        "address_streat": "Morska 10"
+      },
+      "e-mail": "office@acaisoft.com",
+      "logo": "img src=...",
+      "creation-date": "2006"
+    },
+    "position": {
+      "position_name": "Android Developer",
+      "position_type": "Mobile",
+      "position_lvl": ["Mid"],
+      "position_language-required": [
+        "Java",
+        "Git",
+        "Gradle",
+        "Android SKD",
+        "maven"
+      ],
+      "position_language-optional": [
+        "Kotlin",
+        "iOS",
+        "English",
+        "Mobile security"
+      ],
+      "position_spoken-language": ["English", "Polish"],
+      "position_remote": true,
+      "position_contract-type": "contract of employment",
+      "position_salary": {
+        "position_salary_min": "7000 PLN",
+        "position_salary_max": "11000 PLN"
+      },
+      "position_date": "1 w ago"
+    }
+  },
+  {
+    "company": {
+      "company_name": "People Trust Sp. z o.o.",
+      "size": "40+",
+      "address": {
+        "address_country": "Poland",
+        "address_city": ["Warszawa", "Białystok", "Gdynia"],
+        "address_streat": "Mazowiecka 5a/6"
+      },
+      "e-mail": "office@acaisoft.com",
+      "logo": "img src=...",
+      "creation-date": "2013"
+    },
+    "position": {
+      "position_name": "Test Automation Engineer",
+      "position_type": "Testing",
+      "position_lvl": ["Mid", "Senior"],
+      "position_language-required": [
+        "Selenium",
+        "SoapUI",
+        "Karate",
+        "Postman",
+        "Ready API"
+      ],
+      "position_language-optional": [
+        "Java",
+        "CI/CD",
+        "Testy wydajnościowe",
+        "JIRA",
+        "Redmine"
+      ],
+      "position_spoken-language": ["English", "Polish"],
+      "position_remote": true,
+      "position_contract-type": "B2B",
+      "position_salary": {
+        "position_salary_min": "10000 PLN",
+        "position_salary_max": "14000 PLN"
+      },
+      "position_date": "5 w ago"
+    }
+  },
+
+  {
+    "company": {
+      "company_name": "People Trust Sp. z o.o.",
+      "size": "40+",
+      "address": {
+        "address_country": "Poland",
+        "address_city": ["Warszawa", "Białystok", "Gdynia"],
+        "address_streat": "Mazowiecka 5a/6"
+      },
+      "e-mail": "office@acaisoft.com",
+      "logo": "img src=...",
+      "creation-date": "2013"
+    },
+    "position": {
+      "position_name": "Test Automation Engineer",
+      "position_type": "Devops",
+      "position_lvl": ["Mid", "Senior"],
+      "position_language-required": [
+        "Selenium",
+        "SoapUI",
+        "Karate",
+        "Postman",
+        "Ready API"
+      ],
+      "position_language-optional": [
+        "Java",
+        "CI/CD",
+        "Testy wydajnościowe",
+        "JIRA",
+        "Redmine"
+      ],
+      "position_spoken-language": ["English", "Polish"],
+      "position_remote": true,
+      "position_contract-type": "B2B",
+      "position_salary": {
+        "position_salary_min": "10000 PLN",
+        "position_salary_max": "14000 PLN"
+      },
+      "position_date": "5 w ago"
+    }
+  }
+]

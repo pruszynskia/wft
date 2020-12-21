@@ -155,6 +155,7 @@
       "position_date": "1 w ago"
     }
   },
+
   {
     "company": {
       "company_name": "People Trust Sp. z o.o.",
@@ -199,43 +200,213 @@
 
   {
     "company": {
-      "company_name": "People Trust Sp. z o.o.",
-      "size": "40+",
+      "company_name": "Mindworkers by Mindboxgroup",
+      "size": "100",
       "address": {
         "address_country": "Poland",
-        "address_city": ["Warszawa", "Białystok", "Gdynia"],
-        "address_streat": "Mazowiecka 5a/6"
+        "address_city": ["Krakow"],
+        "address_streat": "Powstańcó Śląskich 19/4"
       },
-      "e-mail": "office@acaisoft.com",
+      "e-mail": "office@mbm.com",
       "logo": "img src=...",
-      "creation-date": "2013"
+      "creation-date": "2012"
     },
     "position": {
-      "position_name": "Test Automation Engineer",
+      "position_name": "DevOps Engineer",
       "position_type": "Devops",
       "position_lvl": ["Mid", "Senior"],
       "position_language-required": [
-        "Selenium",
-        "SoapUI",
-        "Karate",
-        "Postman",
-        "Ready API"
+        "Python",
+        "Linux",
+        "AWS",
+        "Ansible",
+        "Jenkins",
+        "Git",
+        "Terraform",
+        "TDD",
+        "CI/CD"
       ],
       "position_language-optional": [
-        "Java",
-        "CI/CD",
-        "Testy wydajnościowe",
-        "JIRA",
-        "Redmine"
+        "Swift",
+        "Kotlin",
+        "Gradle",
+        "Xcode",
+        "Splunk"
       ],
       "position_spoken-language": ["English", "Polish"],
       "position_remote": true,
       "position_contract-type": "B2B",
       "position_salary": {
-        "position_salary_min": "10000 PLN",
-        "position_salary_max": "14000 PLN"
+        "position_salary_min": "950 PLN / d",
+        "position_salary_max": "1100 PLN / d"
       },
-      "position_date": "5 w ago"
+      "position_date": "4 d ago"
+    }
+  },
+
+  {
+    "company": {
+      "company_name": "Devire",
+      "size": "40+",
+      "address": {
+        "address_country": "Poland",
+        "address_city": ["Poznań"],
+        "address_streat": "Poznańska 23/5"
+      },
+      "e-mail": "office@devire.com",
+      "logo": "img src=...",
+      "creation-date": "2010"
+    },
+    "position": {
+      "position_name": "Frontend Developer",
+      "position_type": "Frontend",
+      "position_lvl": ["Mid", "Senior"],
+      "position_language-required": [
+        "JavaScript",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "AngularJS",
+        "Angular",
+        "Grunt"
+      ],
+      "position_language-optional": ["React"],
+      "position_spoken-language": ["English", "Polish"],
+      "position_remote": true,
+      "position_contract-type": "B2B",
+      "position_salary": {
+        "position_salary_min": "14000 PLN",
+        "position_salary_max": "19000 PLN"
+      },
+      "position_date": "2 d ago"
+    }
+  },
+
+  {
+    "company": {
+      "company_name": "Shoprunner",
+      "size": "30+",
+      "address": {
+        "address_country": "Poland",
+        "address_city": ["Kraków"],
+        "address_streat": "Lisiecka 54"
+      },
+      "e-mail": "office@shoprunner.com",
+      "logo": "img src=...",
+      "creation-date": "2018"
+    },
+    "position": {
+      "position_name": "Senior Software Engineer",
+      "position_type": "Backend",
+      "position_lvl": ["Senior"],
+      "position_language-required": [
+        "Experience in itegrations with external APIs",
+        "TypeScript",
+        "Python",
+        "Kotlin"
+      ],
+      "position_language-optional": [
+        "Redis",
+        "PostgreMQ",
+        "Sprark",
+        "PySpark",
+        "ElasticSearch",
+        "Kafka",
+        "Docker",
+        "Python",
+        "SQL"
+      ],
+      "position_spoken-language": ["English", "Polish"],
+      "position_remote": true,
+      "position_contract-type": "B2B",
+      "position_salary": {
+        "position_salary_min": "15000 PLN",
+        "position_salary_max": "21000 PLN"
+      },
+      "position_date": "1 d ago"
+    }
+  },
+
+  {
+    "company": {
+      "company_name": "ASTEK Polska",
+      "size": "500+",
+      "address": {
+        "address_country": "Poland",
+        "address_city": ["Kraków"],
+        "address_streat": "Wroniewskiego 58/5"
+      },
+      "e-mail": "office@astek.com",
+      "logo": "img src=...",
+      "creation-date": "2018"
+    },
+    "position": {
+      "position_name": "Fullstack Developer",
+      "position_type": "Fullstack",
+      "position_lvl": ["Mid"],
+      "position_language-required": [
+        "Java",
+        "Spring",
+        "MongoDB",
+        "JUnit",
+        "Jasmine",
+        "Mocha + Karma",
+        "CSS3",
+        "HTML",
+        "Docker",
+        "Git",
+        "Jira",
+        "Jenkins",
+        "Bamboo",
+        "Bitbucket"
+      ],
+      "position_language-optional": [],
+      "position_spoken-language": ["English", "Polish"],
+      "position_remote": true,
+      "position_contract-type": "B2B",
+      "position_salary": {
+        "position_salary_min": "700 PLN / d",
+        "position_salary_max": "800 PLN / d"
+      },
+      "position_date": "6 d ago"
+    }
+  },
+
+  {
+    "company": {
+      "company_name": "LOCON",
+      "size": "40+",
+      "address": {
+        "address_country": "Poland",
+        "address_city": ["Kraków"],
+        "address_streat": "Wroniewskiego 58/5"
+      },
+      "e-mail": "office@astek.com",
+      "logo": "img src=...",
+      "creation-date": "2018"
+    },
+    "position": {
+      "position_name": "Application Architect",
+      "position_type": "Mobile",
+      "position_lvl": ["Expert"],
+      "position_language-required": [
+        "Android",
+        "Java",
+        "Kotlin",
+        "Git",
+        "REST",
+        "RxJava",
+        "mysql"
+      ],
+      "position_language-optional": [],
+      "position_spoken-language": ["English", "Polish"],
+      "position_remote": true,
+      "position_contract-type": "B2B",
+      "position_salary": {
+        "position_salary_min": "700 PLN / d",
+        "position_salary_max": "800 PLN / d"
+      },
+      "position_date": "6 d ago"
     }
   }
 ]

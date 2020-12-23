@@ -403,10 +403,10 @@
       "position_remote": true,
       "position_contract-type": "B2B",
       "position_salary": {
-        "position_salary_min": "700 PLN / d",
-        "position_salary_max": "800 PLN / d"
+        "position_salary_min": "17000 PLN",
+        "position_salary_max": "21000 PLN"
       },
-      "position_date": "6 d ago"
+      "position_date": "3 d ago"
     }
   }
 ]

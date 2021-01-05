@@ -34,3 +34,26 @@ export const headerStyles = makeStyles(() => ({
     menuList: {
     }
 }));
+
+export const footerStyles = makeStyles(() => ({
+    root: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around",
+        backgroundColor: "#212121",
+        color: "gray"
+    },
+    footerContainer: {
+        display: "flex",
+        padding: "0px",
+        color: "gray"
+    },
+    footerItem: {
+        padding: "30px"
+    },
+    navLogo: {
+        padding: "20px",
+        color: "#16e0bd"
+    }
+
+}));

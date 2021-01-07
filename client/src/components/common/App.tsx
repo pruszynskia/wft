@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Header from './Header';
-import SignIn from './SignIn';
+import Footer from './Footer';
 
 function App() {
   return (
     <div>
       <Header />
-      <SignIn />
+      <Footer />
     </div>
   );
 }

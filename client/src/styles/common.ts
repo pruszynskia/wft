@@ -40,9 +40,11 @@ export const footerStyles = makeStyles(() => ({
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-around",
+        marginTop: "60px",
         backgroundColor: "#212121",
-        color: "gray"
+        color: "gray",
     },
+    
     footerContainer: {
         display: "flex",
         padding: "0px",

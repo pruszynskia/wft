@@ -39,7 +39,7 @@ export const footerStyles = makeStyles(() => ({
     root: {
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-around",
+        justifyContent: "flex-start",
         marginTop: "60px",
         backgroundColor: "#212121",
         color: "gray",
@@ -58,4 +58,39 @@ export const footerStyles = makeStyles(() => ({
         color: "#16e0bd"
     }
 
+}));
+
+export const JobOfferStyles = makeStyles(() => ({
+    root: {
+        backgroundColor: "white",
+        color: "black",
+        // pading: "100px"
+    },
+    
+    jobOfferContainer: {
+        display: "flex",
+        justifyContent: "space-between",
+        flexDirection: "row",
+        flexFlow: "wrap",
+        marginLeft: "100px",
+        marginRight: "100px",
+        width: "100%",
+        border: "1px solid #ccc",
+        backgroundColor: "white",
+        color: "black"
+    },
+    jobOfferItem: {
+        display: "flex",
+        flexDirection: "row",
+        width: "200px",
+        padding: "20px 60px",
+        // border: "1px solid #ccc"
+    },
+
+    positionType: {
+        fontWeight: "bold",
+        textTransform: "uppercase",
+        width: "200px",
+        marginLeft: "100px"
+    }
 }));

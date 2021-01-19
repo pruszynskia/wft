@@ -2,60 +2,54 @@
   {
     "id": "1",
     "company": {
-      "company_name": "Business Design",
+      "name": "Business Design",
       "size": "10+",
       "address": {
-        "address_country": "Poland",
-        "address_city": ["Wroclaw"],
-        "address_streat": "Pasteura 17a/1"
+        "country": "Poland",
+        "city": ["Wroclaw"],
+        "streat": "Pasteura 17a/1"
       },
-      "e-mail": "office@bdesign.com.pl",
+      "email": "office@bdesign.com.pl",
       "logo": "img src=...",
-      "creation-date": "2000"
+      "creationDate": "2000"
     },
     "position": {
-      "position_name": "Frontend Developer",
-      "position_type": "Frontend",
-      "position_lvl": ["Junior"],
-      "position_language-required": ["JavaScript", "React", "CSS", "HTML"],
-      "position_language-optional": ["Git", "Jira"],
-      "position_spoken-language": ["English", "Polish"],
-      "position_remote": true,
-      "position_contract-type": "contract of employment",
-      "position_salary": {
-        "position_salary_min": "3500 PLN",
-        "position_salary_max": "6000 PLN"
+      "name": "Frontend Developer",
+      "type": "Frontend",
+      "lvl": ["Junior"],
+      "languageRequired": ["JavaScript", "React", "CSS", "HTML"],
+      "languageOptional": ["Git", "Jira"],
+      "spokenLanguage": ["English", "Polish"],
+      "remote": true,
+      "contractType": "contract of employment",
+      "salary": {
+        "min": "3500 PLN",
+        "max": "6000 PLN"
       },
-      "position_date": "1 d ago"
+      "date": "1 d ago"
     }
   },
 
   {
     "id": "2",
     "company": {
-      "company_name": "Sages",
+      "name": "Sages",
       "size": "30+",
       "address": {
-        "address_country": "Poland",
-        "address_city": ["Warszawa"],
-        "address_streat": "Mazowiecka 4b/5"
+        "country": "Poland",
+        "city": ["Warszawa"],
+        "streat": "Mazowiecka 4b/5"
       },
-      "e-mail": "office@sages.com",
+      "email": "office@sages.com",
       "logo": "img src=...",
-      "creation-date": "2015"
+      "creationDate": "2015"
     },
     "position": {
-      "position_name": "Java Developer",
-      "position_type": "Backend",
-      "position_lvl": ["Junior", "Mid"],
-      "position_language-required": [
-        "Java",
-        "Linux",
-        "Gradie",
-        "Java EE",
-        "Git"
-      ],
-      "position_language-optional": [
+      "positionName": "Java Developer",
+      "type": "Backend",
+      "lvl": ["Junior", "Mid"],
+      "languageRequired": ["Java", "Linux", "Gradie", "Java EE", "Git"],
+      "languageOptional": [
         "Python",
         "Kotlin",
         "Spring",
@@ -66,36 +60,36 @@
         "Puppet",
         "Ansible"
       ],
-      "position_spoken-language": ["English", "Polish"],
-      "position_remote": false,
-      "position_contract-type": "contract of employment",
-      "position_salary": {
-        "position_salary_min": "10000 PLN",
-        "position_salary_max": "15000 PLN"
+      "spokenLanguage": ["English", "Polish"],
+      "remote": false,
+      "contractType": "contract of employment",
+      "salary": {
+        "min": "10000 PLN",
+        "max": "15000 PLN"
       },
-      "position_date": "3 d ago"
+      "date": "3 d ago"
     }
   },
 
   {
     "id": "3",
     "company": {
-      "company_name": "Avenga",
+      "name": "Avenga",
       "size": "2500+",
       "address": {
-        "address_country": "Poland",
-        "address_city": ["Wrocław"],
-        "address_streat": "Oławska 5"
+        "country": "Poland",
+        "city": ["Wrocław"],
+        "streat": "Oławska 5"
       },
-      "e-mail": "office@avenga.com",
+      "email": "office@avenga.com",
       "logo": "img src=...",
-      "creation-date": "2020"
+      "creationDate": "2020"
     },
     "position": {
-      "position_name": "Senior Fullstack Java Engineer",
-      "position_type": "Fullstack",
-      "position_lvl": ["Senior"],
-      "position_language-required": [
+      "positionName": "Senior Fullstack Java Engineer",
+      "type": "Fullstack",
+      "lvl": ["Senior"],
+      "languageRequired": [
         "Java",
         "JPA",
         "Java EE",
@@ -106,122 +100,111 @@
         "sql server",
         "OOP"
       ],
-      "position_language-optional": [],
-      "position_spoken-language": ["English", "Polish"],
-      "position_remote": true,
-      "position_contract-type": "B2B",
-      "position_salary": {
-        "position_salary_min": "10000 PLN",
-        "position_salary_max": "15900 PLN"
+      "languageOptional": [],
+      "spokenLanguage": ["English", "Polish"],
+      "remote": true,
+      "contractType": "B2B",
+      "salary": {
+        "min": "10000 PLN",
+        "max": "15900 PLN"
       },
-      "position_date": "2 w ago"
+      "date": "2 w ago"
     }
   },
 
   {
     "id": "4",
     "company": {
-      "company_name": "Famoc S.A.",
+      "name": "Famoc S.A.",
       "size": "40+",
       "address": {
-        "address_country": "Poland",
-        "address_city": ["Gdańsk"],
-        "address_streat": "Morska 10"
+        "country": "Poland",
+        "city": ["Gdańsk"],
+        "streat": "Morska 10"
       },
-      "e-mail": "office@acaisoft.com",
+      "email": "office@acaisoft.com",
       "logo": "img src=...",
-      "creation-date": "2006"
+      "creationDate": "2006"
     },
     "position": {
-      "position_name": "Android Developer",
-      "position_type": "Mobile",
-      "position_lvl": ["Mid"],
-      "position_language-required": [
-        "Java",
-        "Git",
-        "Gradle",
-        "Android SKD",
-        "maven"
-      ],
-      "position_language-optional": [
-        "Kotlin",
-        "iOS",
-        "English",
-        "Mobile security"
-      ],
-      "position_spoken-language": ["English", "Polish"],
-      "position_remote": true,
-      "position_contract-type": "contract of employment",
-      "position_salary": {
-        "position_salary_min": "7000 PLN",
-        "position_salary_max": "11000 PLN"
+      "positionName": "Android Developer",
+      "type": "Mobile",
+      "lvl": ["Mid"],
+      "languageRequired": ["Java", "Git", "Gradle", "Android SKD", "maven"],
+      "languageOptional": ["Kotlin", "iOS", "English", "Mobile security"],
+      "spokenLanguage": ["English", "Polish"],
+      "remote": true,
+      "contractType": "contract of employment",
+      "salary": {
+        "min": "7000 PLN",
+        "max": "11000 PLN"
       },
-      "position_date": "1 w ago"
+      "date": "1 w ago"
     }
   },
 
   {
     "id": "5",
     "company": {
-      "company_name": "People Trust Sp. z o.o.",
+      "name": "People Trust Sp. z o.o.",
       "size": "40+",
       "address": {
-        "address_country": "Poland",
-        "address_city": ["Warszawa", "Białystok", "Gdynia"],
-        "address_streat": "Mazowiecka 5a/6"
+        "country": "Poland",
+        "city": ["Warszawa", "Białystok", "Gdynia"],
+        "streat": "Mazowiecka 5a/6"
       },
-      "e-mail": "office@acaisoft.com",
+      "email": "office@acaisoft.com",
       "logo": "img src=...",
-      "creation-date": "2013"
+      "creationDate": "2013"
     },
     "position": {
-      "position_name": "Test Automation Engineer",
-      "position_type": "Testing",
-      "position_lvl": ["Mid", "Senior"],
-      "position_language-required": [
+      "positionName": "Test Automation Engineer",
+      "type": "Testing",
+      "lvl": ["Mid", "Senior"],
+      "languageRequired": [
         "Selenium",
         "SoapUI",
         "Karate",
         "Postman",
         "Ready API"
       ],
-      "position_language-optional": [
+      "languageOptional": [
         "Java",
         "CI/CD",
         "Testy wydajnościowe",
         "JIRA",
         "Redmine"
       ],
-      "position_spoken-language": ["English", "Polish"],
-      "position_remote": true,
-      "position_contract-type": "B2B",
-      "position_salary": {
-        "position_salary_min": "10000 PLN",
-        "position_salary_max": "14000 PLN"
+      "spokenLanguage": ["English", "Polish"],
+      "remote": true,
+      "contractType": "B2B",
+      "salary": {
+        "min": "10000 PLN",
+        "max": "14000 PLN"
       },
-      "position_date": "5 w ago"
+      "date": "5 w ago"
     }
   },
 
   {
     "id": "6",
     "company": {
-      "company_name": "Mindworkers by Mindboxgroup",
+      "name": "Mindworkers by Mindboxgroup",
       "size": "100",
       "address": {
-        "address_country": "Poland",
-        "address_city": ["Krakow"],
-        "address_streat": "Powstańcó Śląskich 19/4"
+        "country": "Poland",
+        "city": ["Krakow"],
+        "streat": "Powstańcó Śląskich 19/4"
       },
-      "e-mail": "office@mbm.com",
+      "email": "office@mbm.com",
       "logo": "img src=...",
-      "creation-date": "2012"
+      "creationDate": "2012"
     },
     "position": {
-      "position_name": "DevOps Engineer",
-      "position_type": "Devops",
-      "position_lvl": ["Mid", "Senior"],
-      "position_language-required": [
+      "positionName": "DevOps Engineer",
+      "type": "Devops",
+      "lvl": ["Mid", "Senior"],
+      "languageRequired": [
         "Python",
         "Linux",
         "AWS",
@@ -232,43 +215,37 @@
         "TDD",
         "CI/CD"
       ],
-      "position_language-optional": [
-        "Swift",
-        "Kotlin",
-        "Gradle",
-        "Xcode",
-        "Splunk"
-      ],
-      "position_spoken-language": ["English", "Polish"],
-      "position_remote": true,
-      "position_contract-type": "B2B",
-      "position_salary": {
-        "position_salary_min": "950 PLN / d",
-        "position_salary_max": "1100 PLN / d"
+      "languageOptional": ["Swift", "Kotlin", "Gradle", "Xcode", "Splunk"],
+      "spokenLanguage": ["English", "Polish"],
+      "remote": true,
+      "contractType": "B2B",
+      "salary": {
+        "min": "950 PLN / d",
+        "max": "1100 PLN / d"
       },
-      "position_date": "4 d ago"
+      "date": "4 d ago"
     }
   },
 
   {
     "id": "7",
     "company": {
-      "company_name": "Devire",
+      "name": "Devire",
       "size": "40+",
       "address": {
-        "address_country": "Poland",
-        "address_city": ["Poznań"],
-        "address_streat": "Poznańska 23/5"
+        "country": "Poland",
+        "city": ["Poznań"],
+        "streat": "Poznańska 23/5"
       },
-      "e-mail": "office@devire.com",
+      "email": "office@devire.com",
       "logo": "img src=...",
-      "creation-date": "2010"
+      "creationDate": "2010"
     },
     "position": {
-      "position_name": "Frontend Developer",
-      "position_type": "Frontend",
-      "position_lvl": ["Mid", "Senior"],
-      "position_language-required": [
+      "positionName": "Frontend Developer",
+      "type": "Frontend",
+      "lvl": ["Mid", "Senior"],
+      "languageRequired": [
         "JavaScript",
         "TypeScript",
         "HTML",
@@ -277,43 +254,43 @@
         "Angular",
         "Grunt"
       ],
-      "position_language-optional": ["React"],
-      "position_spoken-language": ["English", "Polish"],
-      "position_remote": true,
-      "position_contract-type": "B2B",
-      "position_salary": {
-        "position_salary_min": "14000 PLN",
-        "position_salary_max": "19000 PLN"
+      "languageOptional": ["React"],
+      "spokenLanguage": ["English", "Polish"],
+      "remote": true,
+      "contractType": "B2B",
+      "salary": {
+        "min": "14000 PLN",
+        "max": "19000 PLN"
       },
-      "position_date": "2 d ago"
+      "date": "2 d ago"
     }
   },
 
   {
     "id": "8",
     "company": {
-      "company_name": "Shoprunner",
+      "name": "Shoprunner",
       "size": "30+",
       "address": {
-        "address_country": "Poland",
-        "address_city": ["Kraków"],
-        "address_streat": "Lisiecka 54"
+        "country": "Poland",
+        "city": ["Kraków"],
+        "streat": "Lisiecka 54"
       },
-      "e-mail": "office@shoprunner.com",
+      "email": "office@shoprunner.com",
       "logo": "img src=...",
-      "creation-date": "2018"
+      "creationDate": "2018"
     },
     "position": {
-      "position_name": "Senior Software Engineer",
-      "position_type": "Backend",
-      "position_lvl": ["Senior"],
-      "position_language-required": [
+      "positionName": "Senior Software Engineer",
+      "type": "Backend",
+      "lvl": ["Senior"],
+      "languageRequired": [
         "Experience in itegrations with external APIs",
         "TypeScript",
         "Python",
         "Kotlin"
       ],
-      "position_language-optional": [
+      "languageOptional": [
         "Redis",
         "PostgreMQ",
         "Sprark",
@@ -324,36 +301,36 @@
         "Python",
         "SQL"
       ],
-      "position_spoken-language": ["English", "Polish"],
-      "position_remote": true,
-      "position_contract-type": "B2B",
-      "position_salary": {
-        "position_salary_min": "15000 PLN",
-        "position_salary_max": "21000 PLN"
+      "spokenLanguage": ["English", "Polish"],
+      "remote": true,
+      "contractType": "B2B",
+      "salary": {
+        "min": "15000 PLN",
+        "max": "21000 PLN"
       },
-      "position_date": "1 d ago"
+      "date": "1 d ago"
     }
   },
 
   {
     "id": "9",
     "company": {
-      "company_name": "ASTEK Polska",
+      "name": "ASTEK Polska",
       "size": "500+",
       "address": {
-        "address_country": "Poland",
-        "address_city": ["Kraków"],
-        "address_streat": "Wroniewskiego 58/5"
+        "country": "Poland",
+        "city": ["Kraków"],
+        "streat": "Wroniewskiego 58/5"
       },
-      "e-mail": "office@astek.com",
+      "email": "office@astek.com",
       "logo": "img src=...",
-      "creation-date": "2018"
+      "creationDate": "2018"
     },
     "position": {
-      "position_name": "Fullstack Developer",
-      "position_type": "Fullstack",
-      "position_lvl": ["Mid"],
-      "position_language-required": [
+      "positionName": "Fullstack Developer",
+      "type": "Fullstack",
+      "lvl": ["Mid"],
+      "languageRequired": [
         "Java",
         "Spring",
         "MongoDB",
@@ -369,37 +346,37 @@
         "Bamboo",
         "Bitbucket"
       ],
-      "position_language-optional": [],
-      "position_spoken-language": ["English", "Polish"],
-      "position_remote": true,
-      "position_contract-type": "B2B",
-      "position_salary": {
-        "position_salary_min": "700 PLN / d",
-        "position_salary_max": "800 PLN / d"
+      "languageOptional": [],
+      "spokenLanguage": ["English", "Polish"],
+      "remote": true,
+      "contractType": "B2B",
+      "salary": {
+        "min": "700 PLN / d",
+        "max": "800 PLN / d"
       },
-      "position_date": "6 d ago"
+      "date": "6 d ago"
     }
   },
 
   {
     "id": "10",
     "company": {
-      "company_name": "LOCON",
+      "name": "LOCON",
       "size": "40+",
       "address": {
-        "address_country": "Poland",
-        "address_city": ["Kraków"],
-        "address_streat": "Wroniewskiego 58/5"
+        "country": "Poland",
+        "city": ["Kraków"],
+        "streat": "Wroniewskiego 58/5"
       },
-      "e-mail": "office@astek.com",
+      "email": "office@astek.com",
       "logo": "img src=...",
-      "creation-date": "2018"
+      "creationDate": "2018"
     },
     "position": {
-      "position_name": "Application Architect",
-      "position_type": "Mobile",
-      "position_lvl": ["Expert"],
-      "position_language-required": [
+      "positionName": "Application Architect",
+      "type": "Mobile",
+      "lvl": ["Expert"],
+      "languageRequired": [
         "Android",
         "Java",
         "Kotlin",
@@ -408,15 +385,15 @@
         "RxJava",
         "mysql"
       ],
-      "position_language-optional": [],
-      "position_spoken-language": ["English", "Polish"],
-      "position_remote": true,
-      "position_contract-type": "B2B",
-      "position_salary": {
-        "position_salary_min": "17000 PLN",
-        "position_salary_max": "21000 PLN"
+      "languageOptional": [],
+      "spokenLanguage": ["English", "Polish"],
+      "remote": true,
+      "contractType": "B2B",
+      "salary": {
+        "min": "17000 PLN",
+        "max": "21000 PLN"
       },
-      "position_date": "3 d ago"
+      "date": "3 d ago"
     }
   }
 ]

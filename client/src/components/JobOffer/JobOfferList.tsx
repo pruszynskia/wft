@@ -8,7 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import { Button } from '@material-ui/core';
 
-const data =companyData;
+const data = companyData;
 
 const JobOffer = () => {
     const useStyles = JobOfferStyles();
@@ -28,17 +28,17 @@ const JobOffer = () => {
                             <div className={useStyles.jobOfferInnerContainer}>
                                 <Avatar>A</Avatar>
                                 <div className={`${useStyles.jobOfferItem} ${useStyles.bold}`} >
-                                    {pos.position.position_name}
+                                    {pos.position.name}
                                 </div>
                                 <div className={useStyles.jobOfferItem}>
-                                    {pos.company.company_name}
+                                    {pos.company.name}
                                 </div>
                             </div>
                             <div className={useStyles.jobOfferItem}>
-                                {pos.position.position_salary.position_salary_min} - {pos.position.position_salary.position_salary_max}
+                                {pos.position.salary.min} - {pos.position.salary.max}
                             </div>
                             <div className={useStyles.jobOfferItem}>
-                                {pos.company.address.address_city}, {pos.company.address.address_country}
+                                {pos.company.address.city}, {pos.company.address.country}
                             </div>
                         </CardContent>
                     </CardActionArea>

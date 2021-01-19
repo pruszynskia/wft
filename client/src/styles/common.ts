@@ -20,7 +20,7 @@ export const headerStyles = makeStyles(() => ({
 
     navButton: {
         backgroundColor: "#474044",
-        color: "white",
+        color: "white"
     },
     navMenu: {
         marginTop: "45px"
@@ -99,4 +99,68 @@ export const JobOfferStyles = makeStyles(() => ({
     bold: {
         fontWeight: "bold",
     }
+}));
+
+export const JobOfferDetailsStyles = makeStyles(() => ({
+    root: {
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "#white",
+        color: "gray",
+        margin: "50px"
+    },
+    containerGlobal: {
+        display: "flex",
+        flexDirection: "column",
+        padding: "20px",
+        border: "1px solid gray",
+        width: "100%"
+    },
+    containerColumn: {
+        display: "flex",
+        flexDirection: "column"
+    },
+    containerRow: {
+        display: "flex",
+        flexDirection: "row"
+    },
+    containerOpositeRow: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between"
+    },
+    itemColumn: {
+        display: "flex",
+        flexDirection: "column",
+        marginLeft: "10px"
+        
+    },
+    itemRow: {
+        display: "flex",
+        marginLeft: "10px"
+    },
+    itemBoxRow: {
+        display: "flex",
+        padding: "5px 10px",
+        marginLeft: "10px",
+        border: "1px solid #16e0bd"
+    },
+    itemDistance: {
+        display: "flex",
+        flexDirection: "row",
+        marginLeft: "10px",
+        width: "500px"
+    },
+    button:{
+        backgroundColor: "#16e0bd",
+        color: "white",
+        padding: "20px"
+    },
+    bold: {
+        fontWeight: "bold",
+    },
+    textColored: {
+        color: "#16e0bd"
+    }
+
 }));

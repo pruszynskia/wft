@@ -4,8 +4,20 @@ import './index.css';
 import App from './components/common/App';
 import reportWebVitals from './reportWebVitals';
 
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
+import {addJob} from './redux/actions'
+
+
+store.subscribe(() => console.log(store.getState()))
+
+store.dispatch(addJob(1))
+
 ReactDOM.render(
-    <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
 

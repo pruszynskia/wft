@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Header />
-      <JobOfferDetails />
+      <JobOffer />
       <Footer />
     </div>
   );

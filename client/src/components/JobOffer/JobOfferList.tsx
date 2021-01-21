@@ -8,15 +8,22 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import { Button } from '@material-ui/core';
 
+import {addJob} from "../../redux/actions"
+import store from '../../redux/store';
+
 const data = companyData;
 
 const JobOffer = () => {
     const useStyles = JobOfferStyles();
 
+    function handleSomething(){
+        store.dispatch(addJob(1))
+    }
+
     return (
         <div className={useStyles.root}>
             <div className={useStyles.upperCaseBold}>
-                <Button>
+                <Button onClick={handleSomething}>
                     <h2>Position Type</h2>
                 </Button>
             </div>

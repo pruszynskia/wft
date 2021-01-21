@@ -1,0 +1,2 @@
+export const ADD_JOB_OFFER = 'ADD_JOB_OFFER';
+export const DELETE_JOB_OFFER = 'DELETE_JOB_OFFER';

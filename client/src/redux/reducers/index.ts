@@ -1,10 +1,12 @@
-import { combineReducers } from "redux";
 import { ADD_JOB_OFFER, DELETE_JOB_OFFER } from '../actionTypes';
 
+import data from '../../temp/company-data.json'
+
 const initialState = {
+    jobOffers: data
 };
 
-export default function(state = initialState, action: any) {
+export default function(state:any = initialState, action: any) {
     switch(action.type) {
         case ADD_JOB_OFFER: {
             console.log("add job offer")

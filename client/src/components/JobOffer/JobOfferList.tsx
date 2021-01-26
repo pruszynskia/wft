@@ -11,6 +11,8 @@ import { Button } from '@material-ui/core';
 import {addJob} from "../../redux/actions"
 import store from '../../redux/store';
 
+import { Link } from 'react-router-dom';
+
 const data = companyData;
 
 const JobOffer = () => {
@@ -29,27 +31,29 @@ const JobOffer = () => {
             </div>
             {
             data.map((pos: any, id: any) => 
-                <Card key={id} className={useStyles.jobOfferContainer}>
-                    <CardActionArea>
-                        <CardContent className={useStyles.jobOfferInnerContainer}>
-                            <div className={useStyles.jobOfferInnerContainer}>
-                                <Avatar>A</Avatar>
-                                <div className={`${useStyles.jobOfferItem} ${useStyles.bold}`} >
-                                    {pos.position.name}
+                <Link to="jobOfferId">
+                    <Card key={id} className={useStyles.jobOfferContainer}>
+                        <CardActionArea>
+                            <CardContent className={useStyles.jobOfferInnerContainer}>
+                                <div className={useStyles.jobOfferInnerContainer}>
+                                    <Avatar>A</Avatar>
+                                    <div className={`${useStyles.jobOfferItem} ${useStyles.bold}`} >
+                                        {pos.position.name}
+                                    </div>
+                                    <div className={useStyles.jobOfferItem}>
+                                        {pos.company.name}
+                                    </div>
                                 </div>
                                 <div className={useStyles.jobOfferItem}>
-                                    {pos.company.name}
+                                    {pos.position.salary.min} - {pos.position.salary.max}
                                 </div>
-                            </div>
-                            <div className={useStyles.jobOfferItem}>
-                                {pos.position.salary.min} - {pos.position.salary.max}
-                            </div>
-                            <div className={useStyles.jobOfferItem}>
-                                {pos.company.address.city}, {pos.company.address.country}
-                            </div>
-                        </CardContent>
-                    </CardActionArea>
-                </Card>
+                                <div className={useStyles.jobOfferItem}>
+                                    {pos.company.address.city}, {pos.company.address.country}
+                                </div>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+                </Link>
             )
             }
                 <div className={useStyles.upperCaseBold}>

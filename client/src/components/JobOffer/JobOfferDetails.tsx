@@ -1,4 +1,5 @@
 import React from "react";
+
 import { JobOfferDetailsStyles } from "../../styles/common"
 import companyData from "../../temp/company-data.json";
 
@@ -8,10 +9,14 @@ import Avatar from '@material-ui/core/Avatar';
 import { Button } from '@material-ui/core';
 import JobOffer from "./JobOfferList";
 
+import { useRouteMatch } from "react-router-dom";
+
 const data = companyData[0];
 
 const JobOfferDetails = () => {
     const useStyles = JobOfferDetailsStyles();
+    const { jobOfferId } = useRouteMatch("");
+    const data_det = data.filter()[0];
 
     return (
         <div className={useStyles.root}>

@@ -3,6 +3,9 @@ import { headerStyles } from "../../styles/common";
 import { Button } from '@material-ui/core';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+
+import { Link, useRouteMatch, useParams } from "react-router-dom";
+
 const Header = () => {
     const useStyles = headerStyles()
     
@@ -27,7 +30,6 @@ const Header = () => {
         setAnchorEl2(null);
     };
 
-
     return (
         <div className={useStyles.root}>
             
@@ -49,14 +51,14 @@ const Header = () => {
                     open={Boolean(anchorEl1)}
                     onClose={handleClose1}
                 >
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><a href="/">Home</a></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><a href="/job-offers">Job Offers</a></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><a href="/tech-profile">Tech Profile</a></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><a href="/for-employers">For Employers</a></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><a href="/post-a-job">Post a Job</a></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><a href="/companies">Companies</a></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><a href="/language">Language</a></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><a href="/country">Country</a></MenuItem>
+                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/">Home</Link></MenuItem>
+                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/job-offers-list">Job Offers</Link></MenuItem>
+                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/tech-profile">Tech Profile</Link></MenuItem>
+                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/for-employers">For Employers</Link></MenuItem>
+                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/post-a-job">Post a Job</Link></MenuItem>
+                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/companies">Companies</Link></MenuItem>
+                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/language">Language</Link></MenuItem>
+                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/country">Country</Link></MenuItem>
                 </Menu>     
 
                 {/* Acount button */}
@@ -73,8 +75,8 @@ const Header = () => {
                     open={Boolean(anchorEl2)}
                     onClose={handleClose2}
                 >
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose2}><a href="/login">Log In</a></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose2}><a href="/register">Register</a></MenuItem>
+                    <MenuItem className={useStyles.menuItem} onClick={handleClose2}><Link to="/login">Log In</Link></MenuItem>
+                    <MenuItem className={useStyles.menuItem} onClick={handleClose2}><Link to="/register">Register</Link></MenuItem>
                 </Menu>
             </div>
         </div>

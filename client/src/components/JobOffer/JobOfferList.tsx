@@ -31,8 +31,8 @@ const JobOffer = () => {
             </div>
             {
             data.map((pos: any, id: any) => 
-                <Link to="jobOfferId">
-                    <Card key={id} className={useStyles.jobOfferContainer}>
+                <Link to={`/${pos.id}`} key={id}>
+                    <Card className={useStyles.jobOfferContainer}>
                         <CardActionArea>
                             <CardContent className={useStyles.jobOfferInnerContainer}>
                                 <div className={useStyles.jobOfferInnerContainer}>

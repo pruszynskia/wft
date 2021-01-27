@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/job-offers-list" exact component={JobOffer} />
-          <Route path="/:job-offer-details" component={JobOfferDetails} />
+          <Route path="/:jobOfferId" component={JobOfferDetails} />
         </Switch>
         <Footer />
       </div>

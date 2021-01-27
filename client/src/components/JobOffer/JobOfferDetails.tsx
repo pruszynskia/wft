@@ -7,18 +7,19 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import { Button } from '@material-ui/core';
-import JobOffer from "./JobOfferList";
 
-import { useRouteMatch } from "react-router-dom";
+const dataAll = companyData;
 
-const data = companyData[0];
-
-const JobOfferDetails = () => {
+const JobOfferDetails = ({match}: any) => {
     const useStyles = JobOfferDetailsStyles();
-    const { jobOfferId } = useRouteMatch("");
-    const data_det = data.filter()[0];
-
+    //const data_det = data.filter()[0];
+    console.log(match.params.jobOfferId);
+    const jobOfferId = match.params.jobOfferId;
+    let data = dataAll.filter((pos: any) => {pos.id === jobOfferId})[0];
+    console.log(data);
     return (
+        <>
+        {data ?
         <div className={useStyles.root}>
             <Card className={useStyles.containerGlobal}>
                 <CardContent>
@@ -377,6 +378,10 @@ const JobOfferDetails = () => {
             </Card>
 
         </div>
+:
+"loading..."
+}
+</>
     )
 };
 

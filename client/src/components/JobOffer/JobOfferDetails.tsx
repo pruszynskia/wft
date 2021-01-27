@@ -1,21 +1,24 @@
 import React from "react";
 
 import { JobOfferDetailsStyles } from "../../styles/common"
-import companyData from "../../temp/company-data.json";
+import { useSelector } from 'react-redux'
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import { Button } from '@material-ui/core';
 
-const dataAll = companyData;
+interface RootState {
+    jobOffers: any
+}
+
 
 const JobOfferDetails = ({match}: any) => {
     const useStyles = JobOfferDetailsStyles();
     //const data_det = data.filter()[0];
     console.log(match.params.jobOfferId);
     const jobOfferId = match.params.jobOfferId;
-    let data = dataAll.filter((pos: any) => {pos.id === jobOfferId})[0];
+    let data = useSelector((state: RootState) => state.jobOffers).filter((pos: any) => pos.id === jobOfferId)[0]
     console.log(data);
     return (
         <>

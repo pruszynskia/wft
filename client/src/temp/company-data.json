@@ -45,7 +45,7 @@
       "creationDate": "2015"
     },
     "position": {
-      "positionName": "Java Developer",
+      "name": "Java Developer",
       "type": "Backend",
       "lvl": ["Junior", "Mid"],
       "languageRequired": ["Java", "Linux", "Gradie", "Java EE", "Git"],
@@ -86,7 +86,7 @@
       "creationDate": "2020"
     },
     "position": {
-      "positionName": "Senior Fullstack Java Engineer",
+      "name": "Senior Fullstack Java Engineer",
       "type": "Fullstack",
       "lvl": ["Senior"],
       "languageRequired": [
@@ -127,7 +127,7 @@
       "creationDate": "2006"
     },
     "position": {
-      "positionName": "Android Developer",
+      "name": "Android Developer",
       "type": "Mobile",
       "lvl": ["Mid"],
       "languageRequired": ["Java", "Git", "Gradle", "Android SKD", "maven"],
@@ -158,7 +158,7 @@
       "creationDate": "2013"
     },
     "position": {
-      "positionName": "Test Automation Engineer",
+      "name": "Test Automation Engineer",
       "type": "Testing",
       "lvl": ["Mid", "Senior"],
       "languageRequired": [
@@ -201,7 +201,7 @@
       "creationDate": "2012"
     },
     "position": {
-      "positionName": "DevOps Engineer",
+      "name": "DevOps Engineer",
       "type": "Devops",
       "lvl": ["Mid", "Senior"],
       "languageRequired": [
@@ -242,7 +242,7 @@
       "creationDate": "2010"
     },
     "position": {
-      "positionName": "Frontend Developer",
+      "name": "Frontend Developer",
       "type": "Frontend",
       "lvl": ["Mid", "Senior"],
       "languageRequired": [
@@ -281,7 +281,7 @@
       "creationDate": "2018"
     },
     "position": {
-      "positionName": "Senior Software Engineer",
+      "name": "Senior Software Engineer",
       "type": "Backend",
       "lvl": ["Senior"],
       "languageRequired": [
@@ -327,7 +327,7 @@
       "creationDate": "2018"
     },
     "position": {
-      "positionName": "Fullstack Developer",
+      "name": "Fullstack Developer",
       "type": "Fullstack",
       "lvl": ["Mid"],
       "languageRequired": [
@@ -373,7 +373,7 @@
       "creationDate": "2018"
     },
     "position": {
-      "positionName": "Application Architect",
+      "name": "Application Architect",
       "type": "Mobile",
       "lvl": ["Expert"],
       "languageRequired": [

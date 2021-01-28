@@ -1,6 +1,7 @@
 import React from 'react';
 import { JobOfferStyles } from "../../styles/common";
 import companyData from "../../temp/company-data.json";
+import JobOffersSearchBar from './JobOffersSearchBar';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -29,6 +30,10 @@ const JobOffer = () => {
                     <h2>Position Type</h2>
                 </Button>
             </div>
+            <div>
+                <JobOffersSearchBar />
+            </div>
+            
             {
             data.map((pos: any, id: any) => 
                 <Link to={`/${pos.id}`} key={id}>

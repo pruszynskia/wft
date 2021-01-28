@@ -164,3 +164,10 @@ export const JobOfferDetailsStyles = makeStyles(() => ({
     }
 
 }));
+
+export const JobOffersSearchBarStyles = makeStyles(() => ({
+    containerRow: {
+        display: "flex",
+        flexDirection: "row"
+    }
+}))

@@ -15,11 +15,8 @@ interface RootState {
 
 const JobOfferDetails = ({match}: any) => {
     const useStyles = JobOfferDetailsStyles();
-    //const data_det = data.filter()[0];
-    console.log(match.params.jobOfferId);
     const jobOfferId = match.params.jobOfferId;
     let data = useSelector((state: RootState) => state.jobOffers).filter((pos: any) => pos.id === jobOfferId)[0]
-    console.log(data);
     return (
         <>
         {data ?

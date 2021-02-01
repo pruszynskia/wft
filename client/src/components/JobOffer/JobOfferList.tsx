@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { JobOfferStyles } from "../../styles/common";
-import companyData from "../../temp/company-data.json";
-import JobOffersSearchBar from './JobOffersSearchBar';
+import { useSelector } from 'react-redux';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -14,7 +13,9 @@ import store from '../../redux/store';
 
 import { Link } from 'react-router-dom';
 
-const data = companyData;
+interface RootState {
+    jobOffers: any
+}
 
 const JobOffer = () => {
     const useStyles = JobOfferStyles();
@@ -23,6 +24,16 @@ const JobOffer = () => {
         store.dispatch(addJob(1))
     }
 
+    const [searchTerm, setSearchTerm] = useState('');
+
+    function handleChange(e: any) {
+        setSearchTerm(e.target.value);
+    }
+    let data = useSelector((state: RootState) => state.jobOffers).filter((pos: any) => 
+        pos.position.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        pos.company.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
     return (
         <div className={useStyles.root}>
             <div className={useStyles.upperCaseBold}>
@@ -30,9 +41,12 @@ const JobOffer = () => {
                     <h2>Position Type</h2>
                 </Button>
             </div>
-            <div>
-                <JobOffersSearchBar />
-            </div>
+            <input 
+                type="text" 
+                placeholder="Search"
+                onChange={handleChange}
+                value={searchTerm}
+            />
             
             {
             data.map((pos: any, id: any) => 

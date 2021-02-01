@@ -19,7 +19,7 @@ const JobOffersSearchBar = () => {
         const results = data.filter((pos: any) => 
             pos.toLowerCase().includes(searchTerm.toLocaleLowerCase())
             );
-        setSearchResults(results);
+        //setSearchResults(results);
     }, [searchTerm]);
     return (
         <div className={useStyles.containerRow}>

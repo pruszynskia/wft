@@ -1,4 +1,5 @@
 import {makeStyles} from "@material-ui/core";
+import { findByLabelText } from "@testing-library/react";
 
 export const headerStyles = makeStyles(() => ({
     root: {
@@ -169,5 +170,38 @@ export const JobOffersSearchBarStyles = makeStyles(() => ({
     containerRow: {
         display: "flex",
         flexDirection: "row"
+    }
+}))
+
+export const AddJobOfferStyles = makeStyles(() => ({
+    root: {
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "#white",
+        color: "black",
+        margin: "50px"
+    },
+    containerColumn: {
+        display: "flex",
+        flexDirection: "column"
+    },
+    containerRow: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-end"
+    },
+    itemColumn: {
+        display: "flex",
+        flexDirection: "column",
+        marginTop: "20px",
+        
+    },
+    button: {
+        display: "flex",
+        backgroundColor: "#424242",
+        "&:hover": {
+        backgroundColor: "#16e0bd"
+        },
+        marginTop: "20px"
     }
 }))

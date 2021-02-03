@@ -10,7 +10,7 @@ import { Button } from '@material-ui/core';
 
 interface RootState {
     jobOffers: any
-};
+}
 
 
 const JobOfferDetails = ({match}: any) => {

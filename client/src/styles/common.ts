@@ -183,7 +183,8 @@ export const AddJobOfferStyles = makeStyles(() => ({
     },
     containerColumn: {
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        marginTop: "20px"
     },
     containerRow: {
         display: "flex",
@@ -202,6 +203,7 @@ export const AddJobOfferStyles = makeStyles(() => ({
         "&:hover": {
         backgroundColor: "#16e0bd"
         },
+        color: "white",
         marginTop: "20px"
     }
 }))

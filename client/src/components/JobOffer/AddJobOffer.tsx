@@ -64,9 +64,10 @@ const AddJobOffer = () => {
         <form className={useStyles.root}
         onSubmit={handleSubmit}
         >
+            <h1>Form</h1>
             <Card className={useStyles.containerColumn}>
                 <CardContent>
-                    <h1>Form</h1>
+                    <h2>Company Info</h2>
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Company Name"
@@ -123,6 +124,11 @@ const AddJobOffer = () => {
                     value={formData.company.creationDate}
                     onChange={handleInputChange}
                     />
+                </CardContent>
+            </Card>
+            <Card className={useStyles.containerColumn}>
+                <CardContent>
+                    <h2>Position Info</h2>
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Position Name"
@@ -144,6 +150,11 @@ const AddJobOffer = () => {
                     value={formData.position.lvl}
                     onChange={handleInputChange}
                     />
+                </CardContent>
+            </Card>
+            <Card className={useStyles.containerColumn}>
+                <CardContent>
+                    <h2>Requirements</h2>
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Must-Have"
@@ -160,18 +171,16 @@ const AddJobOffer = () => {
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
-                    label="Nice-To-Have"
-                    name="position.languageOptional"
-                    value={formData.position.languageOptional}
-                    onChange={handleInputChange}
-                    />
-                    <TextField className={useStyles.itemColumn}
-                    variant="outlined"
                     label="Language"
                     name="position.spokenLanguage"
                     value={formData.position.spokenLanguage}
                     onChange={handleInputChange}
                     />
+                </CardContent>
+            </Card>
+            <Card className={useStyles.containerColumn}>
+                <CardContent>
+                    <h2>Job description</h2>
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Remote"
@@ -186,6 +195,11 @@ const AddJobOffer = () => {
                     value={formData.position.contractType}
                     onChange={handleInputChange}
                     />
+                </CardContent>
+            </Card>
+            <Card  className={useStyles.containerColumn}>
+                <CardContent>
+                    <h2>Salary</h2>
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Salary-Min"
@@ -207,18 +221,15 @@ const AddJobOffer = () => {
                     value={formData.position.date}
                     onChange={handleInputChange}
                     />
-                    
-                    <div className={useStyles.containerRow}>
-                        <Button className={useStyles.button}
-                        type="submit"
-                        >
-                            Submit
-                        </Button>
-                        
-                    </div>
-                   
                 </CardContent>
             </Card>
+            <div className={useStyles.containerRow}>
+                <Button className={useStyles.button}
+                type="submit"
+                >
+                    Submit
+                </Button>
+            </div>
         </form>
     );
 }

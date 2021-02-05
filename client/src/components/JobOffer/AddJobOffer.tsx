@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { AddJobOfferStyles } from '../../styles/common';
+
+import { useSelector, useDispatch } from 'react-redux';
 
 import TextField from '@material-ui/core/TextField';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
 
 const initialFformData = {
     company: {
@@ -17,7 +14,7 @@ const initialFformData = {
         size: "",
         address: {
           country: "",
-          city: [""],
+          city: "",
           streat: ""
         },
         email: "",
@@ -27,10 +24,10 @@ const initialFformData = {
       position: {
         name: "",
         type: "",
-        lvl: [""],
-        languageRequired: [""],
-        languageOptional: [""],
-        spokenLanguage: [""],
+        lvl: "",
+        languageRequired: "",
+        languageOptional: "",
+        spokenLanguage: "",
         remote: "",
         contractType: "",
         salary: {
@@ -42,6 +39,15 @@ const initialFformData = {
 }
 
 const AddJobOffer = () => {
+
+    // Submit button - add job offer
+    const dispatch = useDispatch();
+    const jobOffers = useSelector((state: any) =>
+    state.jobOffers)
+    const handleAddJobOffer = () => {
+        dispatch({type: "ADD_JOB_OFFER"})
+    }
+
     
     const useStyles = AddJobOfferStyles();
 
@@ -226,6 +232,7 @@ const AddJobOffer = () => {
             <div className={useStyles.containerRow}>
                 <Button className={useStyles.button}
                 type="submit"
+                onClick={handleAddJobOffer}
                 >
                     Submit
                 </Button>

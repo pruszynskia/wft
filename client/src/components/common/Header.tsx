@@ -55,7 +55,7 @@ const Header = () => {
                     <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/job-offers-list">Job Offers</Link></MenuItem>
                     <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/tech-profile">Tech Profile</Link></MenuItem>
                     <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/for-employers">For Employers</Link></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/post-a-job">Post a Job</Link></MenuItem>
+                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/add-job-offer">Post a Job</Link></MenuItem>
                     <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/companies">Companies</Link></MenuItem>
                     <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/language">Language</Link></MenuItem>
                     <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/country">Country</Link></MenuItem>

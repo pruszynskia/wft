@@ -11,7 +11,8 @@ export default function(state:any = initialState, action: any) {
         case ADD_JOB_OFFER: {
             console.log("add job offer")
             return {
-                ...state
+                ...state,
+                jobOffers: [...state.jobOffers, action.payload]
             };
         }
         case DELETE_JOB_OFFER: {

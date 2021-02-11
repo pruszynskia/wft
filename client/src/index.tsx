@@ -12,7 +12,6 @@ import {addJob} from './redux/actions'
 
 store.subscribe(() => console.log(store.getState()))
 
-store.dispatch(addJob(1))
 
 ReactDOM.render(
   <Provider store={store}>

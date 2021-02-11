@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AddJobOfferStyles } from '../../styles/common';
 
 import { useSelector, useDispatch } from 'react-redux';
+import { addJob } from '../../redux/actions';
 
 import TextField from '@material-ui/core/TextField';
 import Card from '@material-ui/core/Card';
@@ -38,33 +39,29 @@ const initialFformData = {
     }
 }
 
+
 const AddJobOffer = () => {
+  
+  const useStyles = AddJobOfferStyles();
 
     // Submit button - add job offer
     const dispatch = useDispatch();
-    const jobOffers = useSelector((state: any) =>
-    state.jobOffers)
-    const handleAddJobOffer = () => {
-        dispatch({type: "ADD_JOB_OFFER"})
-    }
+    const data = useSelector((state: any) =>
+    state)
 
-    
-    const useStyles = AddJobOfferStyles();
+    console.log("data", data)
 
-    const [formData, setFormData] = useState(initialFformData);
-
-    const handleInputChange = (e: any) => {
-        const {name, value} = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    }
+    let [formData, setFormData] = useState(initialFformData);
 
     const handleSubmit = (e: any) => {
         e.preventDefault()
         // console.log(formData)
-        }
+        dispatch({
+          type: "ADD_JOB_OFFER",
+          payload: formData
+        })
+          }
+    // console.log(formData)
         
     return (
         <form className={useStyles.root}
@@ -77,58 +74,123 @@ const AddJobOffer = () => {
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Company Name"
-                    name="company.name"
                     value={formData.company.name}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          company: {
+                              ...formData.company,
+                              name: e.target.value
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Size"
-                    name="company.size"
                     value={formData.company.size}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          company: {
+                              ...formData.company,
+                              size: e.target.value
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Country"
-                    name="company.address.country"
                     value={formData.company.address.country}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          company: {
+                              ...formData.company,
+                              address: {
+                                  ...formData.company.address,
+                                  country: e.target.value
+                                } 
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="City"
-                    name="company.address.city"
                     value={formData.company.address.city}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          company: {
+                              ...formData.company,
+                              address: {
+                                  ...formData.company.address,
+                                  city: e.target.value
+                                } 
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Streat"
-                    name="company.address.streat"
                     value={formData.company.address.streat}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          company: {
+                              ...formData.company,
+                              address: {
+                                  ...formData.company.address,
+                                  streat: e.target.value
+                                } 
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Email"
-                    name="company.email"
                     value={formData.company.email}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          company: {
+                              ...formData.company,
+                              email: e.target.value
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Logo"
-                    name="company.logo"
                     value={formData.company.logo}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          company: {
+                              ...formData.company,
+                              logo: e.target.value
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Creation date"
-                    name="company.creationDate"
                     value={formData.company.creationDate}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          company: {
+                              ...formData.company,
+                              creationDate: e.target.value
+                            },
+                        })
+                      }
                     />
                 </CardContent>
             </Card>
@@ -138,23 +200,44 @@ const AddJobOffer = () => {
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Position Name"
-                    name="position.name"
                     value={formData.position.name}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          position: {
+                              ...formData.position,
+                              name: e.target.value
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Category"
-                    name="position.type"
                     value={formData.position.type}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          position: {
+                              ...formData.position,
+                              type: e.target.value
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Seniority level"
-                    name="position.lvl"
                     value={formData.position.lvl}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          position: {
+                              ...formData.position,
+                              lvl: e.target.value
+                            },
+                        })
+                      }
                     />
                 </CardContent>
             </Card>
@@ -164,23 +247,44 @@ const AddJobOffer = () => {
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Must-Have"
-                    name="position.languageRequired"
                     value={formData.position.languageRequired}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          position: {
+                              ...formData.position,
+                              languageRequired: e.target.value
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Nice-To-Have"
-                    name="position.languageOptional"
                     value={formData.position.languageOptional}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          position: {
+                              ...formData.position,
+                              languageOptional: e.target.value
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Language"
-                    name="position.spokenLanguage"
                     value={formData.position.spokenLanguage}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          position: {
+                              ...formData.position,
+                              spokenLanguage: e.target.value
+                            },
+                        })
+                      }
                     />
                 </CardContent>
             </Card>
@@ -190,16 +294,30 @@ const AddJobOffer = () => {
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Remote"
-                    name="position.remote"
                     value={formData.position.remote}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          position: {
+                              ...formData.position,
+                              remote: e.target.value
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Contract Type"
-                    name="position.contractType"
                     value={formData.position.contractType}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          position: {
+                              ...formData.position,
+                              contractType: e.target.value
+                            },
+                        })
+                      }
                     />
                 </CardContent>
             </Card>
@@ -209,30 +327,56 @@ const AddJobOffer = () => {
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Salary-Min"
-                    name="position.salary.min"
                     value={formData.position.salary.min}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          position: {
+                              ...formData.position,
+                              salary: {
+                                  ...formData.position.salary,
+                                  min: e.target.value
+                                } 
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Salary-Max"
-                    name="position.salary.max"
                     value={formData.position.salary.max}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          position: {
+                              ...formData.position,
+                              salary: {
+                                  ...formData.position.salary,
+                                  max: e.target.value
+                                } 
+                            },
+                        })
+                      }
                     />
                     <TextField className={useStyles.itemColumn}
                     variant="outlined"
                     label="Date"
-                    name="position.date"
                     value={formData.position.date}
-                    onChange={handleInputChange}
+                    onChange={(e: any) =>
+                        setFormData({
+                          ...formData,
+                          position: {
+                              ...formData.position,
+                              date: e.target.value
+                            },
+                        })
+                      }
                     />
                 </CardContent>
             </Card>
             <div className={useStyles.containerRow}>
                 <Button className={useStyles.button}
                 type="submit"
-                onClick={handleAddJobOffer}
                 >
                     Submit
                 </Button>

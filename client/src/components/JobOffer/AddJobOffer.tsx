@@ -64,7 +64,8 @@ const AddJobOffer = () => {
     // console.log(formData)
         
     return (
-        <form className={useStyles.root}
+      <div>
+        <form id="transition-modal-title" className={useStyles.root}
         onSubmit={handleSubmit}
         >
             <h1>Form</h1>
@@ -382,6 +383,7 @@ const AddJobOffer = () => {
                 </Button>
             </div>
         </form>
+        </div>
     );
 }
 

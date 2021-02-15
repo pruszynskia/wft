@@ -7,6 +7,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import { Button } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
@@ -49,7 +50,7 @@ const JobOffer = () => {
 
     const handleClose = () => {
         setOpen(false);
-    };
+    }; 
 
     return (
         <div className={useStyles.root}>
@@ -109,6 +110,11 @@ const JobOffer = () => {
                                 </div>
                                 <div className={useStyles.jobOfferItem}>
                                     {pos.company.address.city}, {pos.company.address.country}
+                                </div>
+                                <div>
+                                    <Button
+                                    startIcon={<DeleteIcon />}
+                                    />
                                 </div>
                             </CardContent>
                         </CardActionArea>

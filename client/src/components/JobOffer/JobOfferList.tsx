@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { JobOfferStyles } from "../../styles/common";
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -51,6 +51,16 @@ const JobOffer = () => {
     const handleClose = () => {
         setOpen(false);
     }; 
+
+    // Delete button
+    const handleDelete = (data:any) => {
+        console.log(data)
+    const dispatch = useDispatch();
+        dispatch({
+            type: 'DELETE_JOB_OFFER',
+            payload: data
+        })
+    };
 
     return (
         <div className={useStyles.root}>
@@ -114,6 +124,7 @@ const JobOffer = () => {
                                 <div>
                                     <Button
                                     startIcon={<DeleteIcon />}
+                                    onClick={handleDelete}
                                     />
                                 </div>
                             </CardContent>

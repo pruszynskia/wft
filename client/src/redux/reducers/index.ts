@@ -1,6 +1,7 @@
 import { ADD_JOB_OFFER, DELETE_JOB_OFFER } from '../actionTypes';
 
 import data from '../../temp/company-data.json'
+import JobOffer from '../../components/JobOffer/JobOfferList';
 
 const initialState = {
     jobOffers: data
@@ -16,9 +17,11 @@ export default function(state:any = initialState, action: any) {
             };
         }
         case DELETE_JOB_OFFER: {
-
+            console.log("delete job offer")
             return {
-                
+                jobOffers: [
+                    ...state.jobOffers.filter((data: any) => data !== action.payload)
+                ]
             };
         }
         

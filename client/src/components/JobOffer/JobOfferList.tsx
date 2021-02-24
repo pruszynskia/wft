@@ -14,6 +14,7 @@ import {
 } from "@material-ui/core";
 
 import DeleteIcon from '@material-ui/icons/Delete';
+import EditIcon from '@material-ui/icons/Edit';
 
 import { Link } from 'react-router-dom';
 import AddJobOffer from './AddJobOffer';
@@ -134,7 +135,10 @@ const JobOffer = () => {
                 </Link>
                 <Button onClick={() => handleDelete(pos.id)} >
                     <DeleteIcon />
-                </Button>   
+                </Button>
+                <Button>
+                    <EditIcon />
+                </Button>
             </div>
             )
             }

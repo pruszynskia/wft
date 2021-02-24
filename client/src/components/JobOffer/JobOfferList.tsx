@@ -27,11 +27,13 @@ interface RootState {
 
 const JobOffer = () => {
     const useStyles = JobOfferStyles();
-    const store = useStore();
     const dispatch = useDispatch();
+
+    /*
     const addJobOfferFilter = useSelector(
         (state: RootState) => state.visibilityFilters.addJobOfferFilter
     );
+    */
 
     // Searchbar
     const [searchTerm, setSearchTerm] = useState('');
@@ -106,9 +108,10 @@ const JobOffer = () => {
             
             {
             data.map((pos: any, id: any) => 
-                <Link to={`/${pos.id}`} key={id}>
-                    <Card className={useStyles.jobOfferContainer}>
-                        <CardActionArea>
+            <div className={useStyles.jobOfferContainer} key={id}>
+                <Link to={`/${pos.id}`}  >
+                    <Card>
+                        <CardActionArea >
                             <CardContent className={useStyles.jobOfferInnerContainer}>
                                 <div className={useStyles.jobOfferInnerContainer}>
                                     <Avatar>A</Avatar>
@@ -127,20 +130,19 @@ const JobOffer = () => {
                                 </div>
                             </CardContent>
                         </CardActionArea>
-                        <CardActions>
-                            <Button onClick={() => handleDelete(pos.id)} >
-                                <DeleteIcon />
-                            </Button>   
-                        </CardActions>
                     </Card>
                 </Link>
+                <Button onClick={() => handleDelete(pos.id)} >
+                    <DeleteIcon />
+                </Button>   
+            </div>
             )
             }
-                <div className={useStyles.upperCaseBold}>
-                    <Button>
-                        <h4>More Jobs</h4>
-                    </Button>
-                </div>
+            <div className={useStyles.upperCaseBold}>
+                <Button>
+                    <h4>More Jobs</h4>
+                </Button>
+            </div>
         </div>
     )
 };

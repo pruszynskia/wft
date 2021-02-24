@@ -24,11 +24,11 @@ export default function(state:any = initialState, action: any) {
             };
         }
         case DELETE_JOB_OFFER: {
-            console.log("delete job offer")
+            console.log(action.payload)
             return {
                 ...state,
                 jobOffers: 
-                    state.jobOffers.filter((data: any) => data.id !== action.payload.id)
+                    state.jobOffers.filter((data: any) => data.id !== action.payload)
             };
         }
 

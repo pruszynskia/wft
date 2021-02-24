@@ -1,10 +1,17 @@
-import { ADD_JOB_OFFER, DELETE_JOB_OFFER } from '../actionTypes';
-
+import { 
+    ADD_JOB_OFFER, 
+    DELETE_JOB_OFFER, 
+    SET_VISIBILITY_FILTER 
+} from '../actionTypes';
+import {v4} from 'uuid'
+ 
 import data from '../../temp/company-data.json'
-import JobOffer from '../../components/JobOffer/JobOfferList';
 
 const initialState = {
-    jobOffers: data
+    jobOffers: data,
+    visibilityFilters: {
+        addJobOfferFilter: false
+    }
 };
 
 export default function(state:any = initialState, action: any) {
@@ -13,19 +20,32 @@ export default function(state:any = initialState, action: any) {
             console.log("add job offer")
             return {
                 ...state,
-                jobOffers: [...state.jobOffers, action.payload]
+                jobOffers: [...state.jobOffers, {id: v4(), ...action.payload}]
             };
         }
         case DELETE_JOB_OFFER: {
             console.log("delete job offer")
             return {
-                jobOffers: [
-                    ...state.jobOffers.filter((data: any) => data !== action.payload)
-                ]
+                ...state,
+                jobOffers: 
+                    state.jobOffers.filter((data: any) => data.id !== action.payload.id)
             };
+        }
+
+        // VISIBILITY_FILTER
+        case SET_VISIBILITY_FILTER: {
+            return {
+                ...state,
+                visibilityFilters: {
+                    ...state.visibilityFilters,
+                    ...action.payload
+                }
+            }
         }
         
         default:
             return state;
     }
 }
+
+

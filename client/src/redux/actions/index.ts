@@ -5,7 +5,7 @@ export const addJob = (data: any) => ({
     payload: data
 });
 
-export const deleteJob = (data: any) => ({
+export const deleteJob = (id: any) => ({
     type: DELETE_JOB_OFFER,
-    payload: data
+    payload: id
 });

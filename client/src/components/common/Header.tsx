@@ -4,7 +4,7 @@ import { Button } from '@material-ui/core';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import { Link, useRouteMatch, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const useStyles = headerStyles()
@@ -51,14 +51,14 @@ const Header = () => {
                     open={Boolean(anchorEl1)}
                     onClose={handleClose1}
                 >
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/">Home</Link></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/job-offers-list">Job Offers</Link></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/tech-profile">Tech Profile</Link></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/for-employers">For Employers</Link></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/add-job-offer">Post a Job</Link></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/companies">Companies</Link></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/language">Language</Link></MenuItem>
-                    <MenuItem className={useStyles.menuItem} onClick={handleClose1}><Link to="/country">Country</Link></MenuItem>
+                    <Link to="/job-offers-list"><MenuItem className={useStyles.menuItem} onClick={handleClose1}>Job Offers</MenuItem></Link>
+                    <Link to="/"><MenuItem className={useStyles.menuItem} onClick={handleClose1}>Home</MenuItem></Link>
+                    <Link to="/tech-profile"><MenuItem className={useStyles.menuItem} onClick={handleClose1}>Tech Profile</MenuItem></Link>
+                    <Link to="/for-employers"><MenuItem className={useStyles.menuItem} onClick={handleClose1}>For Employers</MenuItem></Link>
+                    <Link to="/add-job-offer"><MenuItem className={useStyles.menuItem} onClick={handleClose1}>Post a Job</MenuItem></Link>
+                    <Link to="/companies"><MenuItem className={useStyles.menuItem} onClick={handleClose1}>Companies</MenuItem></Link>
+                    <Link to="/language"><MenuItem className={useStyles.menuItem} onClick={handleClose1}>Language</MenuItem></Link>
+                    <Link to="/country"><MenuItem className={useStyles.menuItem} onClick={handleClose1}>Country</MenuItem></Link>
                 </Menu>     
 
                 {/* Acount button */}

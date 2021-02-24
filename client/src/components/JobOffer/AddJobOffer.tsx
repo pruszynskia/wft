@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { AddJobOfferStyles } from '../../styles/common';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { addJob } from '../../redux/actions';
 
 import TextField from '@material-ui/core/TextField';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
+import { SettingsPowerRounded } from '@material-ui/icons';
 
 const initialFformData = {
     company: {
@@ -40,29 +40,40 @@ const initialFformData = {
 }
 
 
-const AddJobOffer = () => {
+const AddJobOffer = ({setOpen}: any) => {
   
   const useStyles = AddJobOfferStyles();
+  
+  // Submit button - add job offer
+  const dispatch = useDispatch();
+  const data = useSelector((state: any) =>
+  state)
+  
+  console.log("data", data)
+  
+  let [formData, setFormData] = useState(initialFformData);
 
-    // Submit button - add job offer
-    const dispatch = useDispatch();
-    const data = useSelector((state: any) =>
-    state)
+  const [, updateState] = useState({});
 
-    console.log("data", data)
+  const forceUpdate = React.useCallback(() => updateState({}), []);
 
-    let [formData, setFormData] = useState(initialFformData);
-
-    const handleSubmit = (e: any) => {
-        e.preventDefault()
-        // console.log(formData)
-        dispatch({
-          type: "ADD_JOB_OFFER",
-          payload: formData
-        })
-          }
+  const handleSubmit = (e: any) => {
+      e.preventDefault()
+      // console.log(formData)
+      dispatch({
+        type: "ADD_JOB_OFFER",
+        payload: formData
+      });
+      dispatch({
+        type: 'SET_VISIBILITY_FILTER',
+        payload: {
+            addJobOfferFilter: false
+        }
+    })
+setOpen(false)
+  }
     // console.log(formData)
-        
+  
     return (
       <div>
         <form id="transition-modal-title" className={useStyles.root}

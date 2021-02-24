@@ -99,6 +99,9 @@ export const JobOfferStyles = makeStyles(() => ({
     },
     bold: {
         fontWeight: "bold",
+    },
+    dialog: {
+        overflowY: "scroll"
     }
 }));
 

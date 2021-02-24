@@ -1,38 +1,47 @@
 import React, { useState } from 'react';
 import { JobOfferStyles } from "../../styles/common";
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch, useStore } from 'react-redux';
 
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import Avatar from '@material-ui/core/Avatar';
-import { Button } from '@material-ui/core';
+import {
+    Avatar,
+    Button,
+    Card,
+    CardContent,
+    CardActionArea,
+    CardActions,
+    Dialog,
+    DialogContent,
+} from "@material-ui/core";
+
 import DeleteIcon from '@material-ui/icons/Delete';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
-
-import {addJob} from "../../redux/actions"
-import store from '../../redux/store';
 
 import { Link } from 'react-router-dom';
 import AddJobOffer from './AddJobOffer';
 
 interface RootState {
-    jobOffers: any
+    jobOffers: any,
+    visibilityFilters: {
+        addJobOfferFilter: boolean
+    }
 }
 
 const JobOffer = () => {
     const useStyles = JobOfferStyles();
-
-    // Position type button
-    function handleSomething(){
-        store.dispatch(addJob(1))
-    }
+    const store = useStore();
+    const dispatch = useDispatch();
+    const addJobOfferFilter = useSelector(
+        (state: RootState) => state.visibilityFilters.addJobOfferFilter
+    );
 
     // Searchbar
     const [searchTerm, setSearchTerm] = useState('');
+    // Dialog
+    const [open, setOpen] = useState(false);
+    const [, updateState] = useState({});
 
+    const forceUpdate = React.useCallback(() => updateState({}), []);
+   
+    // Searchbar
     function handleChange(e: any) {
         setSearchTerm(e.target.value);
     }
@@ -41,24 +50,30 @@ const JobOffer = () => {
         pos.company.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    // Modal
-    const [open, setOpen] = React.useState(false);
-
+    // Dialog
     const handleOpen = () => {
         setOpen(true);
+        dispatch({
+            type: 'SET_VISIBILITY_FILTER',
+            payload: {
+                addJobOfferFilter: true
+            }
+        })
     };
 
     const handleClose = () => {
+   
         setOpen(false);
+        forceUpdate();
     }; 
 
     // Delete button
-    const handleDelete = (data:any) => {
-        console.log(data)
-    const dispatch = useDispatch();
+    const handleDelete = (id:any) => {
+
+        console.log(id)
         dispatch({
             type: 'DELETE_JOB_OFFER',
-            payload: data
+            payload: id
         })
     };
 
@@ -66,31 +81,20 @@ const JobOffer = () => {
         <div className={useStyles.root}>
             <div className={useStyles.jobOfferInnerContainer}>
                 <div className={useStyles.upperCaseBold}>
-                    <Button onClick={handleSomething}>
-                        <h2>Position type</h2>
-                    </Button>
-                </div>
-                <div className={useStyles.upperCaseBold}>
                     <Button onClick={handleOpen}>
                         <h2>Add job offer</h2>
                     </Button>
-                    <Modal
-                        aria-labelledby="transition-modal-title"
-                        aria-describedby="transition-modal-description"
+                    <Dialog className={useStyles.dialog}
+                        aria-labelledby="transition-dialog-title"
                         open={open}
                         onClose={handleClose}
-                        closeAfterTransition
-                        BackdropComponent={Backdrop}
-                        BackdropProps={{
-                        timeout: 500,
-                        }}
                     >
-                        <Fade in={open}>
+                        <DialogContent>
                             <div>
-                                <AddJobOffer  />
+                                <AddJobOffer  setOpen={setOpen}/>
                             </div>
-                        </Fade>
-                    </Modal>
+                        </DialogContent>
+                    </Dialog>
                 </div>
             </div>
             <input 
@@ -121,14 +125,13 @@ const JobOffer = () => {
                                 <div className={useStyles.jobOfferItem}>
                                     {pos.company.address.city}, {pos.company.address.country}
                                 </div>
-                                <div>
-                                    <Button
-                                    startIcon={<DeleteIcon />}
-                                    onClick={handleDelete}
-                                    />
-                                </div>
                             </CardContent>
                         </CardActionArea>
+                        <CardActions>
+                            <Button onClick={() => handleDelete(pos.id)} >
+                                <DeleteIcon />
+                            </Button>   
+                        </CardActions>
                     </Card>
                 </Link>
             )

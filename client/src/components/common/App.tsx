@@ -14,9 +14,10 @@ function App() {
       <div>
         <Header />
         <Switch>
-          <Route path="/add-job-offer" exact component={AddJobOffer} />
-          <Route path="/job-offers-list" exact component={JobOffer} />
+          <Route exact path="/add-job-offer"  component={AddJobOffer} />
+          <Route exact path="/job-offers-list" component={JobOffer} />
           <Route path="/:jobOfferId" component={JobOfferDetails} />
+          <Route exact path="/">Home</Route>
         </Switch>
         <Footer />
       </div>

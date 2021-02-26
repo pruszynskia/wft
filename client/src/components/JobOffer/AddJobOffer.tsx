@@ -7,9 +7,9 @@ import TextField from '@material-ui/core/TextField';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import { SettingsPowerRounded } from '@material-ui/icons';
 
-const initialFformData = {
+const JobOfferForm = ({setOpen, data1 }: any) => {
+  const initialFormData = data1 ? data1 : {
     company: {
         name: "",
         size: "",
@@ -39,23 +39,14 @@ const initialFformData = {
     }
 }
 
-
-const AddJobOffer = ({setOpen}: any) => {
-  
   const useStyles = AddJobOfferStyles();
   
   // Submit button - add job offer
   const dispatch = useDispatch();
   const data = useSelector((state: any) =>
-  state)
+  state);
   
-  console.log("data", data)
-  
-  let [formData, setFormData] = useState(initialFformData);
-
-  const [, updateState] = useState({});
-
-  const forceUpdate = React.useCallback(() => updateState({}), []);
+  let [formData, setFormData] = useState(initialFormData);
 
   const handleSubmit = (e: any) => {
       e.preventDefault()
@@ -72,11 +63,10 @@ const AddJobOffer = ({setOpen}: any) => {
     })
 setOpen(false)
   }
-    // console.log(formData)
   
     return (
       <div>
-        <form id="transition-modal-title" className={useStyles.root}
+        <form className={useStyles.root}
         onSubmit={handleSubmit}
         >
             <h1>Form</h1>
@@ -398,4 +388,4 @@ setOpen(false)
     );
 }
 
-export default AddJobOffer;
+export default JobOfferForm;

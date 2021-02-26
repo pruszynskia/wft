@@ -17,12 +17,13 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 
 import { Link } from 'react-router-dom';
-import AddJobOffer from './AddJobOffer';
+import JobOfferForm from './AddJobOffer';
 
 interface RootState {
     jobOffers: any,
     visibilityFilters: {
-        addJobOfferFilter: boolean
+        addJobOfferFilter: boolean,
+        editJobOfferFilter: boolean
     }
 }
 
@@ -39,7 +40,8 @@ const JobOffer = () => {
     // Searchbar
     const [searchTerm, setSearchTerm] = useState('');
     // Dialog
-    const [open, setOpen] = useState(false);
+    const [openAddJobOffer, setOpenAddJobOffer] = useState(false);
+    const [openEditJobOffer, setOpenEditJobOffer] = useState(false);
     const [, updateState] = useState({});
 
     const forceUpdate = React.useCallback(() => updateState({}), []);
@@ -55,7 +57,7 @@ const JobOffer = () => {
 
     // Dialog
     const handleOpen = () => {
-        setOpen(true);
+        setOpenAddJobOffer(true);
         dispatch({
             type: 'SET_VISIBILITY_FILTER',
             payload: {
@@ -63,22 +65,43 @@ const JobOffer = () => {
             }
         })
     };
+    
+    const handleOpen2 = () => {
+        setOpenEditJobOffer(true);
+        dispatch({
+            type: 'SET_VISIBILITY_FILTER',
+            payload: {
+                editJobOfferFilter: true
+            }
+        })
+    };
 
     const handleClose = () => {
-   
-        setOpen(false);
+        setOpenAddJobOffer(false);
+        forceUpdate();
+    }; 
+    
+    const handleClose2 = () => {
+        setOpenEditJobOffer(false);
         forceUpdate();
     }; 
 
     // Delete button
     const handleDelete = (id:any) => {
-
         console.log(id)
         dispatch({
             type: 'DELETE_JOB_OFFER',
             payload: id
         })
     };
+
+    // Edit button
+    const handleEdit = (data: any) => {
+        dispatch({
+            type: 'EDIT_JOB_OFFER',
+            payload: data 
+        })
+    }
 
     return (
         <div className={useStyles.root}>
@@ -88,13 +111,13 @@ const JobOffer = () => {
                         <h2>Add job offer</h2>
                     </Button>
                     <Dialog className={useStyles.dialog}
-                        aria-labelledby="transition-dialog-title"
-                        open={open}
+                        aria-labelledby="transition-dialog-title22"
+                        open={openAddJobOffer}
                         onClose={handleClose}
                     >
                         <DialogContent>
                             <div>
-                                <AddJobOffer  setOpen={setOpen}/>
+                                <JobOfferForm setOpen={setOpenAddJobOffer}/>
                             </div>
                         </DialogContent>
                     </Dialog>
@@ -136,9 +159,22 @@ const JobOffer = () => {
                 <Button onClick={() => handleDelete(pos.id)} >
                     <DeleteIcon />
                 </Button>
-                <Button>
+                <Button onClick={handleOpen2}>
                     <EditIcon />
                 </Button>
+                <Dialog className={useStyles.dialog}
+                    aria-labelledby={"transition-dialog-title"+pos.id}
+                    open={openEditJobOffer}
+                    onClose={handleClose2}
+                >
+                    <DialogContent>
+                        <div>
+                            <JobOfferForm setOpen={setOpenEditJobOffer}
+                                data1={pos}
+                            />
+                        </div>
+                    </DialogContent>
+                </Dialog>
             </div>
             )
             }

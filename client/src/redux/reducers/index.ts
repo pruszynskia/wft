@@ -1,6 +1,7 @@
 import { 
     ADD_JOB_OFFER, 
     DELETE_JOB_OFFER, 
+    EDIT_JOB_OFFER,
     SET_VISIBILITY_FILTER 
 } from '../actionTypes';
 import {v4} from 'uuid'
@@ -10,7 +11,8 @@ import data from '../../temp/company-data.json'
 const initialState = {
     jobOffers: data,
     visibilityFilters: {
-        addJobOfferFilter: false
+        addJobOfferFilter: false,
+        editJobOfferFilter: false
     }
 };
 
@@ -29,6 +31,19 @@ export default function(state:any = initialState, action: any) {
                 ...state,
                 jobOffers: 
                     state.jobOffers.filter((data: any) => data.id !== action.payload)
+            };
+        }
+        case EDIT_JOB_OFFER: {
+            return{
+                ...state,
+                jobOffers:
+                    state.joboffers.map((edit: any) => {
+                        if (edit === action.payload.data.id) {
+                            return action.payload.data;
+                        } else {
+                            return edit;
+                        }
+                    }),
             };
         }
 

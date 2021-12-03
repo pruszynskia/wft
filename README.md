@@ -24,7 +24,7 @@ Developed Job Board SPA for users to be able to upload, browse and apply for job
 Project is still being worked on.
 
 ## Setup
-To get started, just clone the repository and run `npm install && npm run dev`:
+To get started, just clone the repository and run `npm install`:
 
     git clone https://github.com/pruszynskia/wft.git
     npm install
